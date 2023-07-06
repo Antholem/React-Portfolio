@@ -18,11 +18,20 @@ app.post('/', (req, res) => {
         }
     });
 
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
     const mailOptions = {
         from: process.env.FROM_EMAIL,
         to: process.env.TO_EMAIL,
-        subject: req.body.subject,
-        text: `From: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\n\n${req.body.message}`,
+        subject: capitalizeFirstLetter(req.body.subject),
+        html: `
+            <p>From: ${req.body.name}</p>
+            <p>Email: ${req.body.email}</p>
+            <p>Phone Number: ${req.body.phoneNumber}</p>
+            <p>${req.body.message}</p>
+        `,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -33,11 +42,11 @@ app.post('/', (req, res) => {
             console.log(info.response);
             res.send('success');
         }
-    })
+    });
+
     console.clear();
     console.log('Hello ' + req.body.name);
 });
-
 
 app.listen(PORT, () => {
     console.log(`Listening in Port: ${PORT}`);
