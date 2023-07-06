@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
+import { AiOutlineLoading3Quarters, AiOutlineCheck } from 'react-icons/ai';
 import { MdSend } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import axios from 'axios';
 
 const RightContact = () => {
+    const [sendMessageIcon, setSendMessageIcon] = useState('send');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -41,6 +43,7 @@ const RightContact = () => {
                 setMessageAnimate(false);
                 setTimeout(() => {
                     setMessageSent(false);
+                    setSendMessageIcon('send');
                 }, 200);
             }
         }
@@ -57,13 +60,17 @@ const RightContact = () => {
             message: message
         }
 
+        setSendMessageIcon('sending');
+
         axios.post(import.meta.env.VITE_PORT, formData)
         .then(res => {
+            
             setMessageSent(true);
             setMessageAnimate(true);
             setTimeout(() => {
                 setOpacity(true);
             }, 100);
+            setSendMessageIcon('sent');
         })
         .catch(err => {
             console.log(err);
@@ -281,7 +288,11 @@ const RightContact = () => {
                     <button
                         className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center"
                     >
-                        <MdSend className="text-white mr-2" />
+                        {
+                            sendMessageIcon === 'sending' ?<AiOutlineLoading3Quarters className="text-white mr-2 animate-spin" /> :
+                                sendMessageIcon === 'sent' ? <AiOutlineCheck className="text-white mr-2" /> :
+                                    <MdSend className="text-white mr-2" />
+                        }
                         <span>Send Message</span>
                     </button>
                 </div>
