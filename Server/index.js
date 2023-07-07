@@ -31,7 +31,7 @@ app.post('/', (req, res) => {
       <div>
         <p>From: ${req.body.name}<br>Email: ${req.body.email}<br>Contact: ${req.body.phoneNumber}</p>
         <p>${req.body.message}</p>
-        <img src="logo.png" alt="Image" style="max-width: 100%; height: auto;">
+        <img src="https://github.com/Antholem/React-Portfolio/blob/main/App/logo.png?raw=true" alt="Image" style="max-width: 100%; height: auto;">
       </div>
     </div>
         `,
