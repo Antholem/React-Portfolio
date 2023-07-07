@@ -27,10 +27,13 @@ app.post('/', (req, res) => {
         to: process.env.TO_EMAIL,
         subject: capitalizeFirstLetter(req.body.subject),
         html: `
-            <p>From: ${req.body.name}</p>
-            <p>Email: ${req.body.email}</p>
-            <p>Phone Number: ${req.body.phoneNumber}</p>
-            <p>${req.body.message}</p>
+            <div style="border: 1px solid #ccc; padding: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+      <div>
+        <p>From: ${req.body.name}<br>Email: ${req.body.email}<br>Contact: ${req.body.phoneNumber}</p>
+        <p>${req.body.message}</p>
+        <img src="logo.png" alt="Image" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
         `,
     };
 

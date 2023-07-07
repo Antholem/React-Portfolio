@@ -52,29 +52,82 @@ const RightContact = () => {
     const handleSend = (e) => {
         e.preventDefault();
 
-        const formData = {
-            name: name,
-            phoneNumber: phoneNumber,
-            email: email,
-            subject: subject,
-            message: message
+        if (name.trim() === '') {
+            setNameError('Name is required');
+        } else if (/\d/.test(name)) {
+            setNameError('Please enter letters only');
+        } else if (/\S/.test(name) && !/[^a-zA-Z\s]/.test(name)) {
+            setNameError('');
+        } else {
+            setNameError('Invalid format');
         }
 
-        setSendMessageIcon('sending');
+        if (phoneNumber.trim() === '') {
+            setPhoneNumberError('Phone Number is required');
+        } else if (!/^\d+$/.test(phoneNumber.replace(/\s/g, ''))) {
+            setPhoneNumberError('Please enter numbers only');
+        } else {
+            setPhoneNumberError('');
+        }
 
-        axios.post(import.meta.env.VITE_PORT, formData)
-        .then(res => {
-            
-            setMessageSent(true);
-            setMessageAnimate(true);
-            setTimeout(() => {
-                setOpacity(true);
-            }, 100);
-            setSendMessageIcon('sent');
-        })
-        .catch(err => {
-            console.log(err);
-        })
+        if (email.trim() === '') {
+            setEmailError('Email is required');
+        } else if (!/^.*@.*\..+$/i.test(email)) {
+            setEmailError('Invalid email format');
+        } else {
+            const words = email.trim().split(/\s+/);
+            if (words.length > 1) {
+                setEmailError('Email should contain only one word');
+            } else {
+                setEmailError('');
+            }
+        }
+
+        if (subject.trim() === '') {
+            setSubjectError('Subject is required');
+        } else {
+            setSubjectError('');
+        }
+
+        if (message.trim() === '') {
+            setMessageError('Message is required');
+        } else if (message.length <= 10) {
+            setMessageError('Message should have more than 10 characters');
+        } else {
+            setMessageError('');
+        }
+
+        if (
+            name.trim() !== '' && nameError == '' &&
+            phoneNumber.trim() !== '' && phoneNumberError == '' &&
+            email.trim() !== '' && emailError == '' &&
+            subject.trim() !== '' && subjectError == '' &&
+            message.trim() !== '' && messageError == ''
+        ) {
+            const formData = {
+                name: name,
+                phoneNumber: phoneNumber,
+                email: email,
+                subject: subject,
+                message: message
+            }
+
+            setSendMessageIcon('sending');
+
+            axios.post(import.meta.env.VITE_PORT, formData)
+                .then(res => {
+
+                    setMessageSent(true);
+                    setMessageAnimate(true);
+                    setTimeout(() => {
+                        setOpacity(true);
+                    }, 100);
+                    setSendMessageIcon('sent');
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
     };
 
     return (
@@ -106,7 +159,7 @@ const RightContact = () => {
                                         } else if (/\S/.test(e.target.value) && !/[^a-zA-Z\s]/.test(e.target.value)) {
                                             setNameError('');
                                         } else {
-                                            setNameError('Invalid format');
+                                            setNameError('Please enter letters only');
                                         }
                                     }}
                                 />
@@ -287,7 +340,7 @@ const RightContact = () => {
                         {sendMessageIcon === 'sending' ? (
                             <AiOutlineLoading3Quarters className="text-white mr-2 animate-spin" />
                         ) : sendMessageIcon === 'sent' ? (
-                                <AiOutlineCheck className="text-green-500 mr-2" />
+                            <AiOutlineCheck className="text-green-500 mr-2" />
                         ) : (
                             <MdSend className="text-white mr-2" />
                         )}
