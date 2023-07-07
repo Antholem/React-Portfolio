@@ -34,11 +34,11 @@ const RightContact = () => {
     const handleClickOutside = (e) => {
         if (messageSent) {
             if (!e.target.closest('.modal-content')) {
-                setName('');
-                setEmail('');
-                setPhoneNumber('');
-                setSubject('');
-                setMessage('');
+                // setName('');
+                // setEmail('');
+                // setPhoneNumber('');
+                // setSubject('');
+                // setMessage('');
                 setOpacity(false);
                 setMessageAnimate(false);
                 setTimeout(() => {
