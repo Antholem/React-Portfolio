@@ -96,7 +96,6 @@ const RightContact = () => {
                                 <input
                                     type="text"
                                     className={`contactInput ${nameError ? 'outline-designColor' : ''}`}
-                                    required
                                     value={name}
                                     onChange={(e) => {
                                         setName(e.target.value);
@@ -137,7 +136,6 @@ const RightContact = () => {
                                 <input
                                     type="text"
                                     className={`contactInput ${phoneNumberError ? 'outline-designColor' : ''}`}
-                                    required
                                     value={phoneNumber}
                                     onChange={(e) => {
                                         setPhoneNumber(e.target.value);
@@ -177,7 +175,6 @@ const RightContact = () => {
                             <input
                                 type="email"
                                 className={`contactInput ${emailError ? 'outline-designColor' : ''}`}
-                                required
                                 value={email}
                                 onChange={(e) => {
                                     setEmail(e.target.value)
@@ -221,7 +218,6 @@ const RightContact = () => {
                             <input
                                 type="text"
                                 className={`contactInput ${subjectError ? 'outline-designColor' : ''}`}
-                                required
                                 value={subject}
                                 onChange={(e) => {
                                     setSubject(e.target.value)
@@ -259,7 +255,6 @@ const RightContact = () => {
                                 className={`contactTextArea ${messageError ? 'outline-designColor' : ''}`}
                                 cols="30"
                                 rows="8"
-                                required
                                 value={message}
                                 onChange={(e) => {
                                     setMessage(e.target.value)
@@ -287,12 +282,15 @@ const RightContact = () => {
                 <div className="w-full">
                     <button
                         className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center"
+                        disabled={sendMessageIcon === 'sending'}
                     >
-                        {
-                            sendMessageIcon === 'sending' ?<AiOutlineLoading3Quarters className="text-white mr-2 animate-spin" /> :
-                                sendMessageIcon === 'sent' ? <AiOutlineCheck className="text-white mr-2" /> :
-                                    <MdSend className="text-white mr-2" />
-                        }
+                        {sendMessageIcon === 'sending' ? (
+                            <AiOutlineLoading3Quarters className="text-white mr-2 animate-spin" />
+                        ) : sendMessageIcon === 'sent' ? (
+                                <AiOutlineCheck className="text-green-500 mr-2" />
+                        ) : (
+                            <MdSend className="text-white mr-2" />
+                        )}
                         <span>Send Message</span>
                     </button>
                 </div>
