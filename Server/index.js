@@ -48,7 +48,18 @@ app.post('/', (req, res) => {
               <p style="margin: 0;">${req.body.phoneNumber}</p>
             </div>
             <div style="padding-top: 20px;">
-              <p>${req.body.message}</p>
+              <div>
+                <p>Dear Mr. Manalo,</p>
+              </div>
+              <div>
+                <p>${req.body.message}</p>
+              </div>
+              <div>
+                <p>Sincerely,</p>
+              </div>
+              <div>
+                <p>${req.body.name}</p>
+              </div>
             </div>
           </div>
           <div style="border-top: 2px solid #f3f2f1;">
