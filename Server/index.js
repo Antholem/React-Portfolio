@@ -49,7 +49,7 @@ app.post('/', (req, res) => {
             </div>
             <div style="padding-top: 20px;">
               <div>
-                <p>Dear Mr. Manalo</p>
+                <p>Dear Mr. Manalo,</p>
               </div>
               <div>
                 <p>${req.body.message}</p>
