@@ -100,12 +100,29 @@ const RightContact = () => {
             subject.trim() !== '' && subjectError == '' &&
             message.trim() !== '' && messageError == ''
         ) {
-            console.log('SENTTT');
-            setMessageSent(true);
-            setMessageAnimate(true);
-            setTimeout(() => {
-                setOpacity(true);
-            }, 100);
+            const formData = {
+                name: name,
+                phoneNumber: phoneNumber,
+                email: email,
+                subject: subject,
+                message: message
+            }
+
+            setSendMessageIcon('sending');
+
+            axios.post(import.meta.env.VITE_PORT, formData)
+                .then(res => {
+
+                    setMessageSent(true);
+                    setMessageAnimate(true);
+                    setTimeout(() => {
+                        setOpacity(true);
+                    }, 100);
+                    setSendMessageIcon('sent');
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     };
 
