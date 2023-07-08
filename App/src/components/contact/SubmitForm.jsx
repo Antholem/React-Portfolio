@@ -131,23 +131,23 @@ const RightContact = () => {
     };
 
     return (
-        <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-2 lgl:gap-3 py-2 lgl:py-5" onSubmit={handleSend}>
-                <div className="w-full flex flex-col lgl:flex-row gap-2 lgl:gap-10">
-                    <div className="w-full lgl:w-1/2 flex flex-col gap-2">
-                        <p className="text-sm text-gray-400 uppercase tracking-wide">
+        <div className='w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne'>
+            <form className='w-full flex flex-col gap-2 lgl:gap-3 py-2 lgl:py-5' onSubmit={handleSend}>
+                <div className='w-full flex flex-col lgl:flex-row gap-2 lgl:gap-10'>
+                    <div className='w-full lgl:w-1/2 flex flex-col gap-2'>
+                        <p className='text-sm text-gray-400 uppercase tracking-wide'>
                             Name
                             {
                                 nameError &&
-                                <span className="text-red-500">
-                                    {" "}*
+                                <span className='text-red-500'>
+                                    {' '}*
                                 </span>
                             }
                         </p>
-                        <div className="flex flex-col">
+                        <div className='flex flex-col'>
                             <div>
                                 <input
-                                    type="text"
+                                    type='text'
                                     className={`contactInput ${nameError ? 'outline-designColor' : ''}`}
                                     value={name}
                                     onChange={(e) => {
@@ -167,27 +167,27 @@ const RightContact = () => {
                             <div className='h-6'>
                                 {
                                     nameError &&
-                                    <span className="text-xs text-red-500">
+                                    <span className='text-xs text-red-500'>
                                         {nameError}
                                     </span>
                                 }
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lgl:w-1/2 flex flex-col gap-2">
-                        <p className="text-sm text-gray-400 uppercase tracking-wide">
+                    <div className='w-full lgl:w-1/2 flex flex-col gap-2'>
+                        <p className='text-sm text-gray-400 uppercase tracking-wide'>
                             Phone Number
                             {
                                 phoneNumberError &&
-                                <span className="text-red-500">
-                                    {" "}*
+                                <span className='text-red-500'>
+                                    {' '}*
                                 </span>
                             }
                         </p>
-                        <div className="flex flex-col">
+                        <div className='flex flex-col'>
                             <div>
                                 <input
-                                    type="text"
+                                    type='text'
                                     className={`contactInput ${phoneNumberError ? 'outline-designColor' : ''}`}
                                     value={phoneNumber}
                                     onChange={(e) => {
@@ -205,7 +205,7 @@ const RightContact = () => {
                             <div className='h-6'>
                                 {
                                     phoneNumberError &&
-                                    <span className="text-xs text-red-500">
+                                    <span className='text-xs text-red-500'>
                                         {phoneNumberError}
                                     </span>
                                 }
@@ -213,20 +213,20 @@ const RightContact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <p className="text-sm text-gray-400 uppercase tracking-wide">
+                <div className='flex flex-col gap-2'>
+                    <p className='text-sm text-gray-400 uppercase tracking-wide'>
                         Email
                         {
                             emailError &&
-                            <span className="text-red-500">
-                                {" "}*
+                            <span className='text-red-500'>
+                                {' '}*
                             </span>
                         }
                     </p>
-                    <div className="flex flex-col">
+                    <div className='flex flex-col'>
                         <div>
                             <input
-                                type="email"
+                                type='email'
                                 className={`contactInput ${emailError ? 'outline-designColor' : ''}`}
                                 value={email}
                                 onChange={(e) => {
@@ -249,27 +249,27 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 emailError &&
-                                <span className="text-xs text-red-500">
+                                <span className='text-xs text-red-500'>
                                         {emailError}
                                 </span>
                             }
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <p className="text-sm text-gray-400 uppercase tracking-wide">
+                <div className='flex flex-col gap-2'>
+                    <p className='text-sm text-gray-400 uppercase tracking-wide'>
                         Subject
                         {
                             subjectError &&
-                            <span className="text-red-500">
-                                {" "}*
+                            <span className='text-red-500'>
+                                {' '}*
                             </span>
                         }
                     </p>
-                    <div className="flex flex-col">
+                    <div className='flex flex-col'>
                         <div>
                             <input
-                                type="text"
+                                type='text'
                                 className={`contactInput ${subjectError ? 'outline-designColor' : ''}`}
                                 value={subject}
                                 onChange={(e) => {
@@ -285,29 +285,29 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 subjectError &&
-                                <span className="text-xs text-red-500">
+                                <span className='text-xs text-red-500'>
                                     {subjectError}
                                 </span>
                             }
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <p className="text-sm text-gray-400 uppercase tracking-wide">
+                <div className='flex flex-col gap-2'>
+                    <p className='text-sm text-gray-400 uppercase tracking-wide'>
                         Message
                         {
                             messageError &&
-                            <span className="text-red-500">
-                                {" "}*
+                            <span className='text-red-500'>
+                                {' '}*
                             </span>
                         }
                     </p>
-                    <div className="flex flex-col">
+                    <div className='flex flex-col'>
                         <div>
                             <textarea
                                 className={`contactTextArea ${messageError ? 'outline-designColor' : ''}`}
-                                cols="30"
-                                rows="8"
+                                cols='30'
+                                rows='8'
                                 value={message}
                                 onChange={(e) => {
                                     setMessage(e.target.value)
@@ -325,24 +325,24 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 messageError &&
-                                <span className="text-xs text-red-500">
+                                <span className='text-xs text-red-500'>
                                    {messageError}
                                 </span>
                             }
                         </div>
                     </div>
                 </div>
-                <div className="w-full">
+                <div className='w-full'>
                     <button
-                        className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center"
+                        className='w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center'
                         disabled={sendMessageIcon === 'sending'}
                     >
                         {sendMessageIcon === 'sending' ? (
-                            <AiOutlineLoading3Quarters className="text-white mr-2 animate-spin" />
+                            <AiOutlineLoading3Quarters className='text-white mr-2 animate-spin' />
                         ) : sendMessageIcon === 'sent' ? (
-                            <AiOutlineCheck className="text-green-500 mr-2" />
+                            <AiOutlineCheck className='text-green-500 mr-2' />
                         ) : (
-                            <MdSend className="text-white mr-2" />
+                            <MdSend className='text-white mr-2' />
                         )}
                         <span>Send Message</span>
                     </button>
@@ -350,7 +350,7 @@ const RightContact = () => {
                 {messageSent && (
                     <motion.div
                         onClick={handleClickOutside}
-                        className="fixed inset-0 flex"
+                        className='fixed inset-0 flex'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: opacity ? 1 : 0 }}
                         transition={{ duration: 0.3 }}
@@ -367,11 +367,11 @@ const RightContact = () => {
                             animate={{ scale: messageAnimate ? 1 : 0 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="bg-bodyColor w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto px-6 py-4 rounded-lg shadow-lg">
-                                <div className="py-4">
-                                    <HiOutlineCheckCircle className="text-green-500 text-6xl mx-auto" />
-                                    <h2 className="text-lg font-bold text-center">Message Sent!</h2>
-                                    <p className="text-sm text-center">
+                            <div className='bg-bodyColor w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[30%] mx-auto px-6 py-4 rounded-lg shadow-lg'>
+                                <div className='py-4'>
+                                    <HiOutlineCheckCircle className='text-green-500 text-6xl mx-auto' />
+                                    <h2 className='text-lg font-bold text-center'>Message Sent!</h2>
+                                    <p className='text-sm text-center'>
                                         I appreciate your sincere interest in my services, {name && name.charAt(0).toUpperCase() + name.slice(1)}!
                                     </p>
                                 </div>

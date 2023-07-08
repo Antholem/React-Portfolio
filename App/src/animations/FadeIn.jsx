@@ -16,8 +16,8 @@ const FadeIn = (props) => {
 
     return (
         <motion.div
-            initial="hidden"
-            animate="visible"
+            initial='hidden'
+            animate='visible'
             variants={animationVariants}
         >
             {props.children}

@@ -26,8 +26,8 @@ const ScrollTop = (props) => {
         <motion.div
             key={props.key}
             variants={animationVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"} // Animate when in view
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'} // Animate when in view
             ref={ref} // Set the intersection observer ref
         >
             {props.children}
