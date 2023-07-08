@@ -6,6 +6,7 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Skills from './components/skills/Skills';
+import SpeedDial from './components/speed-dial/SpeedDial';
 
 const App = () => {
   return (
@@ -19,8 +20,9 @@ const App = () => {
         <Contact />
       </div>
       <Footer />
+      <SpeedDial />
     </div>
-  )
-}
+  );
+};
 
 export default App;
