@@ -17,11 +17,11 @@
   }
 
   .contactInput {
-    @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300;
+    @apply w-full h-12 rounded-lg bg-[#191b1e] text-lightText px-4 active:outline-none hover:outline-gray-500 hover:outline-1 focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300;
   }
 
   .contactTextArea {
-    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none;
+    @apply w-full rounded-lg bg-[#191b1e] text-lightText px-4 py-2 active:outline-none hover:outline-gray-500 hover:outline-1 focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none;
   }
 }
 
