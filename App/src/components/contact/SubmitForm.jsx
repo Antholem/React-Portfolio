@@ -20,6 +20,7 @@ const RightContact = () => {
     const [messageSent, setMessageSent] = useState(false);
     const [messageAnimate, setMessageAnimate] = useState(false);
     const [opacity, setOpacity] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         // Add event listener to close the modal when clicking outside
@@ -31,6 +32,11 @@ const RightContact = () => {
         };
     }, []);
 
+    useEffect(() => {
+        // Toggle body overflow when modal state changes
+        document.body.style.overflowY = modalOpen ? 'hidden' : 'auto';
+    }, [modalOpen]);
+
     const handleClickOutside = (e) => {
         if (messageSent) {
             if (!e.target.closest('.modal-content')) {
@@ -39,6 +45,7 @@ const RightContact = () => {
                 // setPhoneNumber('');
                 // setSubject('');
                 // setMessage('');
+                setModalOpen(false);
                 setOpacity(false);
                 setMessageAnimate(false);
                 setTimeout(() => {
@@ -119,6 +126,7 @@ const RightContact = () => {
 
                     setMessageSent(true);
                     setMessageAnimate(true);
+                    setModalOpen(true)
                     setTimeout(() => {
                         setOpacity(true);
                     }, 100);
@@ -131,7 +139,7 @@ const RightContact = () => {
     };
 
     return (
-        <div className='w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne'>
+        <div className='w-full lgl:w-[60%] h-full py-10 flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne'>
             <form className='w-full flex flex-col gap-2 lgl:gap-3 py-2 lgl:py-5' onSubmit={handleSend}>
                 <div className='w-full flex flex-col lgl:flex-row gap-2 lgl:gap-10'>
                     <div className='w-full lgl:w-1/2 flex flex-col gap-2'>
