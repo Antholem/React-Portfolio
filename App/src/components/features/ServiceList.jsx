@@ -1,7 +1,7 @@
 import { FaDesktop, FaMobileAlt } from 'react-icons/fa';
 import { SiAntdesign } from 'react-icons/si';
 
-const features = [
+const serviceList = [
     {
         title: 'Web Development',
         desc: 'Creating powerful and responsive websites with precision and creativity.',
@@ -19,4 +19,4 @@ const features = [
     }
 ];
 
-export default features;
+export default serviceList;

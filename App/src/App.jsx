@@ -9,7 +9,7 @@ import Skills from './components/skills/Skills';
 
 const App = () => {
   return (
-    <div className="w-full h-auto bg-bodyColor text-lightText">
+    <div className='w-full h-auto bg-bodyColor text-lightText'>
       <Navbar />
       <div className='max-w-screen-xl mx-auto px-4 lgl:px-10'>
         <Banner />
@@ -23,4 +23,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

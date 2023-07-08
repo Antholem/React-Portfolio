@@ -8,4 +8,14 @@ import Mobile1 from './images/projects/projectMobile1.png';
 import Mobile2 from './images/projects/projectMobile2.png';
 import Resume from './sources/Manalo-Sam-Resume.pdf';
 
-export { Logo, BannerImg, Resume, Background, Project1, Project2, Project3, Mobile1, Mobile2 };
+export {
+    Logo,
+    BannerImg, 
+    Resume, 
+    Background, 
+    Project1, 
+    Project2, 
+    Project3, 
+    Mobile1, 
+    Mobile2 
+};

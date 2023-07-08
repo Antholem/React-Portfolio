@@ -104,7 +104,7 @@ const LeftContact = () => {
     }, [showSnackbar]);
 
     return (
-        <div className="w-full lgl:w-[35%] h-full p-4 lgl:p-8 flex flex-col gap-8 justify-center">
+        <div className='w-full lgl:w-[35%] h-full p-4 lgl:p-8 flex flex-col gap-8 justify-center'>
             <AnimatePresence>
                 {showSnackbar && (
                     <Snackbar message={snackbarMessage} onClose={handleCloseSnackbar} />
@@ -112,16 +112,16 @@ const LeftContact = () => {
             </AnimatePresence>
             <div className='flex flex-col gap-6'>
                 <div className='flex flex-col gap-2'>
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className='text-3xl font-bold text-white'>
                         Get in Touch
                     </h3>
-                    <p className="text-base text-gray-400 tracking-wide mb-2">
+                    <p className='text-base text-gray-400 tracking-wide mb-2'>
                         I'm available to answer any questions or discuss potential collaborations.
                     </p>
                 </div>
                 <div className='flex flex-col gap-10'>
                     <p className='text-base text-gray-400 flex flex-col items-start gap-2'>
-                        <p className="text-sm text-white uppercase tracking-wide">
+                        <p className='text-sm text-white uppercase tracking-wide'>
                             Contact
                         </p>
                         <div className='flex flex-row gap-6 items-center'>
@@ -135,19 +135,19 @@ const LeftContact = () => {
                                 {copied === '+639773336314' ? (
                                     <LuCopyCheck
                                         onClick={() => handleCopyClick('+639773336314')}
-                                        className="cursor-pointer text-green-500"
+                                        className='cursor-pointer text-green-500'
                                     />
                                 ) : (
                                     <LuCopy
                                         onClick={() => handleCopyClick('+639773336314')}
-                                        className="cursor-pointer"
+                                        className='cursor-pointer'
                                     />
                                 )}
                             </div>
                         </div>
                     </p>
                     <p className='text-base text-gray-400 flex flex-col items-start gap-2'>
-                        <p className="text-sm text-white uppercase tracking-wide">
+                        <p className='text-sm text-white uppercase tracking-wide'>
                             Email
                         </p>
                         <div className='flex flex-row gap-6 items-center'>
@@ -161,19 +161,19 @@ const LeftContact = () => {
                                 {copied === 'antholemlemmanalo@gmail.com' ? (
                                     <LuCopyCheck
                                         onClick={() => handleCopyClick('antholemlemmanalo@gmail.com')}
-                                        className="cursor-pointer text-green-500"
+                                        className='cursor-pointer text-green-500'
                                     />
                                 ) : (
                                     <LuCopy
                                         onClick={() => handleCopyClick('antholemlemmanalo@gmail.com')}
-                                        className="cursor-pointer"
+                                        className='cursor-pointer'
                                     />
                                 )}
                             </div>
                         </div>
                     </p>
                     <p className='text-base text-gray-400 flex flex-col items-start gap-2'>
-                        <p className="text-sm text-white uppercase tracking-wide">
+                        <p className='text-sm text-white uppercase tracking-wide'>
                             Location
                         </p>
                         <div className='flex flex-row gap-6 items-center'>
@@ -188,50 +188,50 @@ const LeftContact = () => {
                 </div>
                 <div className='flex flex-col gap-4'>
                     <p className='text-base text-gray-400 flex flex-col items-start gap-2'>
-                        <p className="text-sm text-white uppercase tracking-wide">
+                        <p className='text-sm text-white uppercase tracking-wide'>
                             Find me in
                         </p>
                         <div>
                             <div className='flex gap-4'>
                                 <a
-                                    href="https://www.facebook.com"
+                                    href='https://www.facebook.com'
                                     target='_blank'
-                                    className="bannerIcon"
+                                    className='bannerIcon'
                                     onMouseEnter={() => handleMouseEnter('Facebook')}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <FaFacebookF />
-                                    {tooltipText === 'Facebook' && <div className="tooltip">Lem Garcia</div>}
+                                    {tooltipText === 'Facebook' && <div className='tooltip'>Lem Garcia</div>}
                                 </a>
                                 <a
-                                    href="https://github.com"
+                                    href='https://github.com'
                                     target='_blank'
-                                    className="bannerIcon"
+                                    className='bannerIcon'
                                     onMouseEnter={() => handleMouseEnter('Github')}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <FaGithub />
-                                    {tooltipText === 'Github' && <div className="tooltip">Antholem</div>}
+                                    {tooltipText === 'Github' && <div className='tooltip'>Antholem</div>}
                                 </a>
                                 <a
-                                    href="https://www.linkedin.com"
+                                    href='https://www.linkedin.com'
                                     target='_blank'
-                                    className="bannerIcon"
+                                    className='bannerIcon'
                                     onMouseEnter={() => handleMouseEnter('LinkedIn')}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <FaLinkedinIn />
-                                    {tooltipText === 'LinkedIn' && <div className="tooltip">Sam Antholem Manalo</div>}
+                                    {tooltipText === 'LinkedIn' && <div className='tooltip'>Sam Antholem Manalo</div>}
                                 </a>
                                 <a
-                                    href="https://www.instagram.com"
+                                    href='https://www.instagram.com'
                                     target='_blank'
-                                    className="bannerIcon"
+                                    className='bannerIcon'
                                     onMouseEnter={() => handleMouseEnter('Instagram')}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <FaInstagram />
-                                    {tooltipText === 'Instagram' && <div className="tooltip">garcia.lemmie</div>}
+                                    {tooltipText === 'Instagram' && <div className='tooltip'>garcia.lemmie</div>}
                                 </a>
                             </div>
                         </div>
