@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = (props) => {
     return (
-        <div className='w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:-translate-y-2 transition-all duration-500'>
+        <div className='w-full px-12 h-80 bg-card py-10 rounded-lg shadow-shadowOne flex items-center group hover:-translate-y-2 transition-all duration-500'>
             <div className='flex justify-center'>
                 <div className='flex h-full flex-col gap-10 '>
                     <div className='w-10 h-8 flex flex-col justify-between'>

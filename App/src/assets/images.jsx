@@ -6,6 +6,7 @@ import Project2 from './images/projects/project2.png';
 import Project3 from './images/projects/project3.png';
 import Mobile1 from './images/projects/projectMobile1.png';
 import Mobile2 from './images/projects/projectMobile2.png';
+import Mobile3 from './images/projects/projectMobile3.png';
 import Resume from './sources/Manalo-Sam-Resume.pdf';
 
 export {
@@ -17,5 +18,6 @@ export {
     Project2, 
     Project3, 
     Mobile1, 
-    Mobile2 
+    Mobile2,
+    Mobile3
 };

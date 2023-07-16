@@ -139,7 +139,7 @@ const RightContact = () => {
     };
 
     return (
-        <div className='w-full lgl:w-[60%] h-full py-10 flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne'>
+        <div className='w-full lgl:w-[60%] bg-[#121921] h-full py-10 flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne'>
             <form className='w-full flex flex-col gap-2 lgl:gap-3 py-2 lgl:py-5' onSubmit={handleSend}>
                 <div className='w-full flex flex-col lgl:flex-row gap-2 lgl:gap-10'>
                     <div className='w-full lgl:w-1/2 flex flex-col gap-2'>
@@ -147,7 +147,7 @@ const RightContact = () => {
                             Name
                             {
                                 nameError &&
-                                <span className='text-red-500'>
+                                <span className='text-[#c51f5d]'>
                                     {' '}*
                                 </span>
                             }
@@ -175,7 +175,7 @@ const RightContact = () => {
                             <div className='h-6'>
                                 {
                                     nameError &&
-                                    <span className='text-xs text-red-500'>
+                                    <span className='text-xs text-[#c51f5d]'>
                                         {nameError}
                                     </span>
                                 }
@@ -187,7 +187,7 @@ const RightContact = () => {
                             Phone Number
                             {
                                 phoneNumberError &&
-                                <span className='text-red-500'>
+                                <span className='text-[#c51f5d]'>
                                     {' '}*
                                 </span>
                             }
@@ -213,7 +213,7 @@ const RightContact = () => {
                             <div className='h-6'>
                                 {
                                     phoneNumberError &&
-                                    <span className='text-xs text-red-500'>
+                                    <span className='text-xs text-[#c51f5d]'>
                                         {phoneNumberError}
                                     </span>
                                 }
@@ -226,7 +226,7 @@ const RightContact = () => {
                         Email
                         {
                             emailError &&
-                            <span className='text-red-500'>
+                            <span className='text-[#c51f5d]'>
                                 {' '}*
                             </span>
                         }
@@ -257,7 +257,7 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 emailError &&
-                                <span className='text-xs text-red-500'>
+                                <span className='text-xs text-[#c51f5d]'>
                                         {emailError}
                                 </span>
                             }
@@ -269,7 +269,7 @@ const RightContact = () => {
                         Subject
                         {
                             subjectError &&
-                            <span className='text-red-500'>
+                            <span className='text-[#c51f5d]'>
                                 {' '}*
                             </span>
                         }
@@ -293,7 +293,7 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 subjectError &&
-                                <span className='text-xs text-red-500'>
+                                <span className='text-xs text-[#c51f5d]'>
                                     {subjectError}
                                 </span>
                             }
@@ -305,7 +305,7 @@ const RightContact = () => {
                         Message
                         {
                             messageError &&
-                            <span className='text-red-500'>
+                            <span className='text-[#c51f5d]'>
                                 {' '}*
                             </span>
                         }
@@ -333,7 +333,7 @@ const RightContact = () => {
                         <div className='h-6'>
                             {
                                 messageError &&
-                                <span className='text-xs text-red-500'>
+                                <span className='text-xs text-[#c51f5d]'>
                                    {messageError}
                                 </span>
                             }
@@ -342,7 +342,7 @@ const RightContact = () => {
                 </div>
                 <div className='w-full'>
                     <button
-                        className='w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center'
+                        className='w-full h-12 bg-black rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent justify-center flex items-center'
                         disabled={sendMessageIcon === 'sending'}
                     >
                         {sendMessageIcon === 'sending' ? (

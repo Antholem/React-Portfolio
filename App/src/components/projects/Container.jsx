@@ -27,14 +27,14 @@ const Card = (props) => {
     };
 
     const cardStyles = {
-        backgroundImage: `url(${Background})`,
+        background: `url(${Background})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     };
 
     return (
-        <div className='w-full p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group'>
-            <div className='w-full h-[80%] overflow-hidden rounded-lg' style={cardStyles}>
+        <div className='w-full p-4 bg-card xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col group'>
+            <div className='w-full h-[80%] bg-bodyColor overflow-hidden rounded-lg gradient-div bg-gradient-to-t from-[#0c1217] to-[#06212d]'>
                 <motion.div 
                     initial={{ opacity: 0 }} 
                     animate={{ opacity: 1 }} 

@@ -20,13 +20,15 @@ export default {
         titleFont: ["Open Sans", "sans-serif"],
       },
       colors: {
-        bodyColor: "#212428",
+        bodyColor: "#0c1217",
         lightText: "#c4cfde",
         boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
-        designColor: "#ff014f",
+        designColor: "#1DA1F2",
+        card: "#121921"
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "0px 4px 10px rgba(0, 0, 0, 0.25), 0px 4px 15px rgba(0, 0, 0, 0.15)",
+        neon: "2px 2px 2px #1DA1F2, -2px -2px 20px #1DA1F2",
       },
     },
   },

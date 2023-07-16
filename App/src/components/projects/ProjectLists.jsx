@@ -1,4 +1,4 @@
-import { Project1, Project2, Project3, Mobile1, Mobile2 } from '../../assets/images';
+import { Project1, Project2, Project3, Mobile1, Mobile2, Mobile3 } from '../../assets/images';
 
 const projectLists = [
     {
@@ -20,10 +20,10 @@ const projectLists = [
     {
         title: 'CryptCoin',
         desc: 'Real-time cryptocurrency app using ReactJS and Tailwind with Coingecko API for live data and dynamic routing.',
-        src: [Project3, Mobile2],
+        src: [Project3, Mobile3],
         date: new Date(2023, 5, 16, 23, 34, 45),
-        site: 'https://learn-type.vercel.app/',
-        github: 'https://github.com/Antholem/Learn-Type'
+        site: 'https://crypt-coin.vercel.app/',
+        github: 'https://github.com/Antholem/Crypt-Coin'
     }
 ];
 

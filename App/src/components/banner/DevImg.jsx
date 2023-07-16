@@ -11,7 +11,7 @@ const RightBanner = () => {
         alt='bannerImg'
       />
       <motion.div
-        className='absolute bottom-0 w-[350px] h-[400px] lgl:w-[500px] lgl:h-[680px] bg-gradient-to-r rounded-lg border-2 border-designColor shadow-shadowOne flex justify-center items-center animate-pulse'
+        className='absolute bottom-0 w-[350px] h-[400px] lgl:w-[500px] lgl:h-[680px] bg-gradient-to-r rounded-lg border-2 border-designColor shadow-neon flex justify-center items-center animate-pulse'
         transition={{ duration: 0.3 }}
       ></motion.div>
     </div>
