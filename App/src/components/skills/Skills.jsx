@@ -13,7 +13,7 @@ const Skills = () => {
             <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-6'>
                 {Lists.map((item, index) => (
                     <ScrollTop key={index}>
-                        <div className='w-full px-10 h-40 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:-translate-y-2 transition-all duration-500'>
+                        <div className='w-full px-10 h-40 rounded-lg bg-card shadow-shadowOne flex items-center group hover:-translate-y-2 transition-all duration-500'>
                             <div className='flex justify-center w-full'>
                                 <div className='flex h-full flex-col gap-4'>
                                     <div className='flex flex-row justify-center'>

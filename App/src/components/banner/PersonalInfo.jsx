@@ -20,21 +20,25 @@ const LeftBanner = () => {
     return (
         <div className='w-full lgl:w-1/2 flex flex-col gap-10 lgl:gap-20'>
             <div className='flex flex-col gap-5'>
-                <h4 className='text-sm lgl:text-lg font-normal uppercase text-center lgl:text-left'>Hello World!</h4>
+                <h4 className='text-sm lgl:text-lg font-normal uppercase text-center lgl:text-left'>
+                    Hello World!
+                </h4>
                 <h1 className='text-4xl lgl:text-6xl font-bold text-white text-center lgl:text-left'>
                     I'm{' '}
-                    <span className='text-designColor capitalize text-center lgl:text-left'>Sam Manalo</span>
+                    <span className='text-designColor capitalize text-center lgl:text-left'>
+                        Sam Manalo
+                    </span>
                 </h1>
                 <h2 className='text-2xl lgl:text-4xl font-bold text-white text-center lgl:text-left'>
                     <span>{text}</span>
-                    <Cursor cursorBlinking='false' cursorStyle='|' cursorColor='#ff014f' />
+                    <Cursor cursorBlinking='false' cursorStyle='|' cursorColor='#1DA1F2' />
                 </h2>
                 <p className='text-base font-bodyFont leading-6 tracking-wide text-center lgl:text-left'>
                     A highly motivated Software Engineer and React Developer who thrives on building visually stunning and user-friendly websites. With a comprehensive skill set encompassing HTML5, CSS3, ES6+, and React.js, I specialize in creating captivating online experiences.
                 </p>
                 <div className='flex justify-center lgl:justify-start items-center'>
                     <button
-                        className='w-auto px-10 h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 border-[1px] hover:border-designColor border-transparent flex items-center' // Added flex and items-center classes
+                        className='w-auto px-10 h-12 bg-[#080c0f] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 border-[1px] hover:border-designColor border-transparent flex items-center' // Added flex and items-center classes
                         onClick={openResume}
                     >
                         <GoLinkExternal className='text-white mr-2' />
