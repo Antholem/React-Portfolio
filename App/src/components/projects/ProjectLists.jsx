@@ -19,7 +19,7 @@ const projectLists = [
     },
     {
         title: 'CryptCoin',
-        desc: 'Real-time cryptocurrency app using ReactJS and Tailwind with Coingecko API for live data and dynamic routing.',
+        desc: 'Real-time cryptocurrency app using ReactJS and Material UI with Coingecko API for live data and dynamic routing.',
         src: [Project3, Mobile3],
         date: new Date(2023, 5, 16, 23, 34, 45),
         site: 'https://crypt-coin.vercel.app/',
