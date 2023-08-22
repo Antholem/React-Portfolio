@@ -21,6 +21,7 @@ const Projects = () => {
                             date={`Updated ${DynamicDate(item.date)}`}
                             github={item.github}
                             site={item.site}
+                            background={item.background}
                         />
                     </ScrollTop>
                 ))}
