@@ -6,8 +6,9 @@ const projectLists = [
         desc: 'A Static Single Page Application that built entirely from Scratch Using HTML, CSS, and VanillaJS',
         src: [Project1, Mobile1],
         date: new Date(2023, 3, 14, 12, 35, 32),
-        site: 'https://learn-type.vercel.app/',
-        github: 'https://github.com/Antholem/Learn-Type'
+        site: 'https://learn-type.vercel',
+        github: 'https://github.com/Antholem/Learn-Type',
+        background: 'bg-gradient-to-t from-[#0c1217] to-[#0d3853]'
     },
     {
         title: 'PokéAPI',
@@ -15,7 +16,8 @@ const projectLists = [
         src: [Project2, Mobile2],
         date: new Date(2023, 4, 22, 4, 30, 15),
         site: 'https://poke-api-2023.vercel.app/',
-        github: 'https://github.com/Antholem/PokeAPI'
+        github: 'https://github.com/Antholem/PokeAPI',
+        background: 'bg-gradient-to-t from-[#0c1217] to-[#828282]'
     },
     {
         title: 'CryptCoin',
@@ -23,7 +25,8 @@ const projectLists = [
         src: [Project3, Mobile3],
         date: new Date(2023, 5, 16, 23, 34, 45),
         site: 'https://crypt-coin.vercel.app/',
-        github: 'https://github.com/Antholem/Crypt-Coin'
+        github: 'https://github.com/Antholem/Crypt-Coin',
+        background: 'bg-gradient-to-t from-[#0c1217] to-[#1e0640]'
     }
 ];
 
