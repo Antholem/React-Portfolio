@@ -6,7 +6,7 @@ const projectLists = [
         desc: 'A Static Single Page Application that built entirely from Scratch Using HTML, CSS, and VanillaJS',
         src: [Project1, Mobile1],
         date: new Date(2023, 3, 14, 12, 35, 32),
-        site: 'https://learn-type.vercel',
+        site: 'https://learn-type.vercel.app/',
         github: 'https://github.com/Antholem/Learn-Type',
         background: 'bg-gradient-to-t from-[#0c1217] to-[#0d3853]'
     },
