@@ -31,7 +31,7 @@ const SpeedDial = () => {
 
     return (
         <motion.div
-            className='fixed bottom-5 right-5 z-50 bg-designColor rounded-full p-2 cursor-pointer'
+            className='fixed bottom-12 right-5 z-50 bg-designColor rounded-full p-2 cursor-pointer'
             onClick={scrollToTop}
             initial={{ opacity: 0 }}
             animate={{ opacity: showScrollToTop ? 1 : 0 }}
