@@ -26,15 +26,9 @@ const Card = (props) => {
         setTooltipText('');
     };
 
-    const cardStyles = {
-        background: `url(${Background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    };
-
     return (
         <div className='w-full p-4 bg-card xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col group'>
-            <div className={`w-full h-[80%] bg-bodyColor overflow-hidden rounded-lg gradient-div ${props.background}`}>
+            <div className={`w-full h-[80%] bg-bodyColor hover:bg-opacity-70 overflow-hidden rounded-lg gradient-div ${props.background}`}>
                 <motion.div 
                     initial={{ opacity: 0 }} 
                     animate={{ opacity: 1 }} 
